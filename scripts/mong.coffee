@@ -5,7 +5,7 @@ module.exports = (robot) ->
   send = (channel, msg) ->
     robot.send { room: channel }, msg
 
-  new cronJob('0 0 8 * * *', () ->
+  new cronJob('0 5 7 * * *', () ->
     send "#general", "おはようございます！"
   ).start()
 
