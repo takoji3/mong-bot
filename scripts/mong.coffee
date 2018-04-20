@@ -11,7 +11,6 @@ module.exports = (robot) ->
 
   new cronJob('0 30 23 * * *', () ->
     send "#general", "お休みの時間ですよ！"
-    send "#general", "/giphy おやすみ"
   ).start()
 
   new cronJob('0 30 17 * * 3,6', () ->
