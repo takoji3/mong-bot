@@ -14,6 +14,10 @@ module.exports = (robot) ->
     send "#general", "/giphy おやすみ"
   ).start()
 
+  new cronJob('0 30 17 * * 3,6', () ->
+    send "#general", "ランニングの時間だ :runnning: 走れ走れ！"
+  ).start()
+
   robot.hear /つかれた/, (msg) ->
     msg.send "つかれたねぇ〜"
 
