@@ -25,5 +25,5 @@ module.exports = (robot) ->
     t = res.match[1]
     res.send "OK, I'll notify you in #{t} minutes"
     setTimeout () ->
-      res.reply "#{t} miniues has passed!"
+      res.reply "#{t} miniutes has passed!"
     , t * 1000 * 60
