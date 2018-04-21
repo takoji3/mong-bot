@@ -10,15 +10,15 @@ module.exports = (robot) ->
   ).start()
 
   new cronJob('0 30 23 * * *', () ->
-    send "#general", "お休みの時間ですよ！ :zzz:"
+    send "#general", "@takoji お休みの時間ですよ！ :zzz:"
   ).start()
 
   new cronJob('0 30 17 * * 3,6', () ->
-    send "#general", "ランニングの時間だ :runnning: 走れ走れ！"
+    send "#general", "@takoji ランニングの時間だ :running: 走れ走れ！"
   ).start()
 
   new cronJob('0 0 10 * * 1,2,3,4,5', () ->
-    send "#general", "お仕事を開始しましょう :+1:"
+    send "#general", "@takoji お仕事を開始しましょう :+1:"
   ).start()
 
   robot.hear /つかれた/, (msg) ->
