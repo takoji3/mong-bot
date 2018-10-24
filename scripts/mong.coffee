@@ -17,10 +17,6 @@ module.exports = (robot) ->
     send "#general", "@takoji ランニングの時間だ :running: 走れ走れ！"
   ).start()
 
-  new cronJob('0 30 10 * * 1,2,3,4,5', () ->
-    send "#general", "@takoji お仕事を開始しましょう :+1:"
-  ).start()
-
   robot.hear /つかれた/, (msg) ->
     msg.send "つかれたねぇ〜"
 
